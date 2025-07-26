@@ -1,0 +1,6 @@
+{
+  "name": "AI Image Analyzer",
+  "description": "An intelligent web application that uses the Gemini API to analyze images. Users can upload an image, ask a question about it, and receive a detailed, AI-generated analysis.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
