@@ -1,178 +1,282 @@
+<div align="center">
+
+<img src="https://img.shields.io/badge/TypeScript-93.5%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+<img src="https://img.shields.io/badge/Gemini-AI%20Powered-4285F4?style=for-the-badge&logo=google&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vite-Build%20Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tailwind%20CSS-Styling-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+<img src="https://img.shields.io/badge/License-MIT-00C853?style=for-the-badge"/>
+
+<br/><br/>
 
 # 🧠 AI Image Analyzer
+### *React · TypeScript · Gemini API · Tailwind CSS · Vite*
 
-The **AI Image Analyzer** is a modern web app built with **React** and **TypeScript**, using the **Gemini API** for intelligent image analysis. Users can upload images, enter custom prompts, and get detailed AI-generated responses. With a clean UI, mobile-first design, and solid error handling, this project is a great showcase of AI-driven image interaction.
+**A modern, AI-powered web application that analyses images using Google Gemini — upload any PNG or JPEG, enter a custom prompt, and receive a detailed, context-aware AI-generated response in seconds.**
 
----
+<br/>
 
-## 📑 Table of Contents
+[![GitHub Stars](https://img.shields.io/github/stars/ibtesaamaslam/AI-Image-Analyzer?style=social)](https://github.com/ibtesaamaslam/AI-Image-Analyzer/stargazers)
+&nbsp;
+[![GitHub Forks](https://img.shields.io/github/forks/ibtesaamaslam/AI-Image-Analyzer?style=social)](https://github.com/ibtesaamaslam/AI-Image-Analyzer/network/members)
+&nbsp;
+[![GitHub Issues](https://img.shields.io/github/issues/ibtesaamaslam/AI-Image-Analyzer)](https://github.com/ibtesaamaslam/AI-Image-Analyzer/issues)
 
-* [Features](#features)
-* [Tech Stack](#tech-stack)
-* [Prerequisites](#prerequisites)
-* [Installation](#installation)
-* [Configuration](#configuration)
-* [Running the Application](#running-the-application)
-* [Project Structure](#project-structure)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgements](#acknowledgements)
+</div>
 
 ---
 
-## 🚀 Features
+## 📋 Table of Contents
 
-* **Image Upload and Preview**
-  Upload PNG or JPEG images and instantly preview them in a responsive layout.
-
-* **Custom Prompt Input**
-  Ask your own questions about the image—fully customizable.
-
-* **AI-Powered Analysis**
-  Uses the Gemini API to generate context-aware responses from image data.
-
-* **Responsive Design**
-  Built with Tailwind CSS for a sleek, mobile-friendly UI.
-
-* **Robust Error Handling**
-  Validates file types and shows helpful messages for any issues.
-
-* **Loading Indicators**
-  Visual feedback while your image is being processed.
-
-* **Reset Functionality**
-  Quickly clear the current image and start fresh.
-
-* **Type-Safe Codebase**
-  Entirely written in TypeScript for reliability and better dev experience.
+- [Overview](#-overview)
+- [Tech Stack](#-tech-stack)
+- [Features](#-features)
+- [How It Works — Gemini API Flow](#-how-it-works--gemini-api-flow)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Environment Variables](#-environment-variables)
+- [Available Scripts](#-available-scripts)
+- [Usage Workflow](#-usage-workflow)
+- [Use Cases](#-use-cases)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+- [Author](#-author)
+- [License](#-license)
+- [Acknowledgements](#-acknowledgements)
 
 ---
 
-## 🛠️ Tech Stack
+## 🔍 Overview
 
-* **Frontend**: React, TypeScript, Tailwind CSS
-* **API Integration**: Gemini API
-* **Build Tool**: Vite
-* **Package Manager**: npm
-* **Env Management**: dotenv
-* **Code Quality**: TypeScript (strict mode)
+**AI Image Analyzer** is a full-featured, AI-driven image analysis web application that bridges the gap between raw visual data and natural language understanding. Built on **React 18** and **TypeScript** with **Vite** for lightning-fast development, the app sends user-uploaded images alongside custom text prompts to the **Google Gemini API** — which returns rich, contextual AI analysis of everything it sees in the image.
 
----
+The project is engineered with a mobile-first, responsive design using **Tailwind CSS**, a completely type-safe codebase (TypeScript 93.5%), clean component architecture, and production-grade error handling — making it both a practical tool and a strong demonstration of multimodal AI integration in a modern frontend stack.
 
-## ⚙️ Prerequisites
-
-Before getting started, make sure you have:
-
-* **Node.js** (v16 or higher)
-* **npm** (v8 or higher)
-* A **Gemini API key** (get it from the Gemini platform)
+> 💡 **What makes this different from basic image classification?** Traditional image classifiers output a fixed label (e.g., "cat"). Gemini's multimodal vision model understands the entire scene — objects, relationships, text in images, emotions, spatial context, and more — and responds in natural language to any question you ask about it.
 
 ---
 
-## 📥 Installation
+## 🧰 Tech Stack
 
-1. **Clone the repo**:
-
-   ```bash
-   git clone https://github.com/ibtesaamaslam/ai-image-analyzer.git
-   cd ai-image-analyzer
-   ```
-
-2. **Install dependencies**:
-
-   ```bash
-   npm install
-   ```
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| [React](https://react.dev/) | 18 | UI framework — component-based architecture |
+| [TypeScript](https://www.typescriptlang.org/) | Strict mode | 93.5% of codebase — end-to-end type safety |
+| [Vite](https://vitejs.dev/) | Latest | Build tool — ESM-native, fast HMR via `vite.config.ts` |
+| [Tailwind CSS](https://tailwindcss.com/) | Latest | Utility-first styling — mobile-first responsive design |
+| [Google Gemini API](https://ai.google.dev/) | Latest | Multimodal vision AI — image + text → detailed analysis |
+| [dotenv](https://github.com/motdotla/dotenv) | via Vite | Secure `GEMINI_API_KEY` injection via `import.meta.env` |
+| HTML5 | — | 6.5% of codebase — `index.html` Vite entry point |
 
 ---
 
-## 🔐 Configuration
+## ✨ Features
 
-1. **Set up your environment variables**:
+### 🖼️ Image Upload & Preview
+- Drag-and-drop or click-to-browse file input supporting **PNG** and **JPEG** formats.
+- Instant image preview rendered in the UI before analysis — no page reload.
+- File type validation on selection — unsupported formats trigger a clear, descriptive error.
 
-   Create a `.env.local` file in the root directory and add:
+### 💬 Custom Prompt Input
+- Fully customisable text prompt field — ask anything about the uploaded image.
+- Default prompt: `"Describe this image in detail."` — works immediately out of the box.
+- Supports complex, multi-part questions: object identification, text extraction, mood analysis, scene description, and more.
 
-   ```
-   GEMINI_API_KEY=your-gemini-api-key
-   ```
+### 🤖 AI-Powered Analysis (Gemini)
+- Sends the image as base64-encoded data alongside the prompt to the **Gemini API** via `services/`.
+- Receives a rich, natural-language response covering all visible elements in the image.
+- Results displayed in a structured, readable panel adjacent to the image preview.
 
-   Make sure `.env.local` is listed in `.gitignore`.
+### ⏳ Loading States
+- Visual loading indicator active during the Gemini API call.
+- Analyze button disabled while a request is in flight — prevents duplicate submissions.
+- Smooth transition from loading to result display.
 
-2. **Check Vite config**:
-   The app uses `vite.config.ts` to load the API key using `import.meta.env`.
+### 🛡️ Robust Error Handling
+- Invalid file types caught at upload — user sees a specific error, not a generic failure.
+- API errors (invalid key, network failure, rate limit) surface as clear, actionable messages.
+- All errors handled gracefully without crashing the application.
+
+### 🔄 Reset Functionality
+- A single **Clear** button removes the current image, resets the prompt, and clears the analysis result — ready for the next image instantly.
+
+### 📱 Responsive Design
+- Tailwind CSS breakpoints ensure the two-panel layout (image + analysis) stacks cleanly on mobile.
+- Touch-optimised upload zone and buttons work correctly on iOS and Android browsers.
+
+### 🔒 Type-Safe Codebase
+- 93.5% TypeScript — strict mode enabled in `tsconfig.json`.
+- All component props, API response shapes, and utility functions are fully typed.
+- Zero implicit `any` — reliable IntelliSense and compile-time error detection throughout development.
 
 ---
 
-## 🧪 Running the Application
+## ⚙️ How It Works — Gemini API Flow
 
-### Start Dev Server
+```
+User uploads image (PNG / JPEG)
+            ↓
+Image converted to base64 string (client-side)
+            ↓
+User enters custom prompt text
+            ↓
+services/geminiService.ts
+  └── Builds multimodal request:
+      {
+        contents: [
+          {
+            parts: [
+              { text: prompt },
+              { inlineData: { mimeType, data: base64Image } }
+            ]
+          }
+        ]
+      }
+            ↓
+POST → https://generativelanguage.googleapis.com
+       /v1beta/models/gemini-pro-vision:generateContent
+            ↓
+Gemini Vision Model processes image + prompt
+            ↓
+Response: { candidates[0].content.parts[0].text }
+            ↓
+AI analysis text rendered in results panel
+```
+
+The `GEMINI_API_KEY` is injected at build time via Vite's `import.meta.env.GEMINI_API_KEY` — it never appears in client-side source code directly.
+
+---
+
+## 📂 Project Structure
+
+```
+AI-Image-Analyzer/
+│
+├── components/                  # Reusable React UI components
+│   ├── Header.tsx               # App title and navigation bar
+│   ├── ImageUploader.tsx        # Drag-and-drop upload zone with preview
+│   ├── PromptInput.tsx          # Custom prompt text field
+│   ├── AnalysisResult.tsx       # AI response display panel
+│   └── LoadingSpinner.tsx       # Loading indicator during API call
+│
+├── services/
+│   └── geminiService.ts         # Gemini API client — builds and sends requests
+│
+├── utils/
+│   └── imageUtils.ts            # File validation, base64 conversion helpers
+│
+├── App.tsx                      # Root component — layout, state, orchestration
+├── index.tsx                    # React DOM root mount
+├── index.html                   # Vite HTML entry point
+├── metadata.json                # App metadata (Google AI Studio config)
+├── package.json                 # Dependencies and npm scripts
+├── tsconfig.json                # TypeScript strict mode configuration
+└── vite.config.ts               # Vite build config — API key env injection
+```
+
+> **Note:** Files live at the **repository root** — there is no `src/` subdirectory. `App.tsx` and `index.tsx` sit alongside the config files at the top level.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** v16 or higher
+- **npm** v8 or higher
+- A **Google Gemini API key** — get one free at [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+### Installation
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/ibtesaamaslam/AI-Image-Analyzer.git
+cd AI-Image-Analyzer
+
+# 2. Install dependencies
+npm install
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env.local` file in the repository root:
+
+```bash
+# .env.local
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+> ⚠️ **Security:** `.env.local` must be listed in `.gitignore` — never commit your API key. Vite exposes only variables prefixed with `VITE_` to the browser by default; the `vite.config.ts` handles the `GEMINI_API_KEY` injection safely.
+
+| Variable | Required | Source |
+|----------|----------|--------|
+| `GEMINI_API_KEY` | Yes | [Google AI Studio](https://aistudio.google.com/app/apikey) → API Keys → Create API Key |
+
+---
+
+## 📜 Available Scripts
+
+```bash
+# Start development server with hot module replacement
 npm run dev
-```
+# → http://localhost:5173
 
-Visit: [http://localhost:5173](http://localhost:5173)
-
-### Build for Production
-
-```bash
+# Build for production (outputs to /dist)
 npm run build
-```
 
-Build output goes to `/dist`.
-
-### Preview Production Build
-
-```bash
+# Preview the production build locally
 npm run preview
 ```
 
 ---
 
-## 🗂 Project Structure
+## 🧑‍💻 Usage Workflow
 
-```
-ai-image-analyzer/
-├── public/                   # Static assets
-├── src/
-│   ├── components/           # React components (Header, ImageUploader, etc.)
-│   ├── services/             # Gemini API integration
-│   ├── utils/                # Helper functions
-│   ├── App.tsx               # Main app component
-│   └── index.tsx             # React entry point
-├── .env.local                # Environment variables
-├── .gitignore
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-```
+### Step 1 — Upload an Image
+Click the upload zone or drag and drop a **PNG** or **JPEG** file. The image preview appears immediately. Unsupported formats (e.g., `.gif`, `.webp`) will show an error — re-upload a supported format.
+
+### Step 2 — Write Your Prompt
+The default prompt is `"Describe this image in detail."` — you can leave it as-is or replace it with any question:
+- `"What objects are visible and where are they positioned?"`
+- `"Extract all text visible in this image."`
+- `"What mood or emotion does this image convey?"`
+- `"Is there anything unusual or concerning in this image?"`
+
+### Step 3 — Analyze
+Click **Analyze Image**. The loading indicator activates while Gemini processes the multimodal request (typically 1–3 seconds depending on image size and network). The AI response appears in the right panel.
+
+### Step 4 — Clear & Try Again
+Click **Clear** to reset everything — image, prompt, and result — and start with a new image.
 
 ---
 
-## 🧑‍💻 Usage
+## 🎯 Use Cases
 
-### 1. Upload an Image
+| Domain | Example Prompt |
+|--------|----------------|
+| **Accessibility** | `"Describe this image for a visually impaired person."` |
+| **Content moderation** | `"Does this image contain any harmful or inappropriate content?"` |
+| **E-commerce** | `"List all visible product features and condition."` |
+| **Education** | `"Explain what is shown in this diagram."` |
+| **Medical (informational)** | `"Describe the visible anatomy in this illustration."` |
+| **Document scanning** | `"Extract and transcribe all text in this image."` |
+| **Art & design** | `"What artistic style and techniques are used in this image?"` |
+| **Security** | `"Identify all people and objects in this surveillance image."` |
 
-Click the upload zone or drag-and-drop a supported image (PNG, JPEG). Invalid formats will trigger an error.
+---
 
-### 2. Enter a Prompt
+## 🗺️ Roadmap
 
-Write your custom query (e.g., `"What’s happening in this image?"`). Default is `"Describe this image in detail."`
-
-### 3. Analyze
-
-Click **Analyze Image** to send the data to Gemini. The AI’s response appears on the right.
-
-### 4. Clear & Reset
-
-Use **Clear** to remove the current image and prompt.
-
-### 5. Error Handling
-
-Bad input or API issues will show friendly error messages. Make sure your API key is valid.
+- [ ] **Multi-image upload** — analyse and compare multiple images in a single session
+- [ ] **Analysis history** — persist past analyses to `localStorage` or Supabase
+- [ ] **Export results** — download the AI response as `.txt` or `.pdf`
+- [ ] **Gemini model selector** — let users switch between `gemini-pro-vision`, `gemini-1.5-pro`, and `gemini-1.5-flash`
+- [ ] **Voice prompt input** — Web Speech API integration for hands-free prompt entry
+- [ ] **Batch analysis mode** — upload a folder and analyse all images with a shared prompt
+- [ ] **Confidence / detail level slider** — prompt engineering presets (brief, detailed, technical)
+- [ ] **Dark mode** — system-aware theme via Tailwind `dark:` variants
 
 ---
 
@@ -180,50 +284,78 @@ Bad input or API issues will show friendly error messages. Make sure your API ke
 
 Contributions are welcome!
 
-1. **Fork** the repo
+```bash
+# 1. Fork the repository
 
-2. **Create a new branch**:
+# 2. Clone your fork
+git clone https://github.com/YOUR-USERNAME/AI-Image-Analyzer.git
+cd AI-Image-Analyzer
 
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+# 3. Install dependencies
+npm install
 
-3. **Make changes**, follow best practices
+# 4. Create a feature branch
+git checkout -b feature/add-history-panel
 
-4. **Test** using:
+# 5. Make changes and commit
+git add .
+git commit -m "feat: add analysis history panel with localStorage"
 
-   ```bash
-   npm run dev
-   ```
+# 6. Push and open a Pull Request
+git push origin feature/add-history-panel
+```
 
-5. **Push and PR**
-   Submit a pull request with a clear explanation of your feature/fix.
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**. See `LICENSE` for details.
+**Contribution ideas:** add a new Gemini model option, build the history panel, implement dark mode, add WEBP support, or write unit tests for `utils/imageUtils.ts`.
 
 ---
 
-## 🙌 Acknowledgements
+## 👤 Author
 
-* **Microsoft & LinkedIn Learning**
-  For inspiration via the *Microsoft Azure AI Essentials* and *Hands-On Generative AI with Multi-Agent LangChain* courses.
+<div align="center">
 
-* **Gemini API**
-  For powering image analysis.
+**Ibtesaam Aslam**
 
-* **React & Vite**
-  For a fast and flexible dev environment.
+[![GitHub](https://img.shields.io/badge/GitHub-ibtesaamaslam-181717?style=for-the-badge&logo=github)](https://github.com/ibtesaamaslam)
 
-* **Tailwind CSS**
-  For rapid UI design.
+*Full-Stack Developer & AI Enthusiast*
+
+</div>
 
 ---
 
-Thanks for checking out the **AI Image Analyzer**!
-Feel free to open an issue or reach out if you have feedback or questions. 🚀
+## 📜 License
 
+```
+MIT License — Copyright (c) 2024 Ibtesaam Aslam
+```
 
+| Permission | Status |
+|-----------|--------|
+| ✅ Commercial use | Allowed |
+| ✅ Modification | Allowed |
+| ✅ Distribution | Allowed |
+| ✅ Private use | Allowed |
+| ❌ Liability | No warranty |
+| ❌ Trademark use | Not granted |
+
+---
+
+## 🙏 Acknowledgements
+
+- **[Google Gemini API](https://ai.google.dev/)** — for the powerful multimodal vision model that makes image + prompt → analysis possible in a single API call.
+- **[Google AI Studio](https://aistudio.google.com/)** — this project was scaffolded from the AI Studio repository template (`metadata.json`), which provided the initial project structure.
+- **[Microsoft & LinkedIn Learning](https://www.linkedin.com/learning/)** — for the *Microsoft Azure AI Essentials* and *Hands-On Generative AI with Multi-Agent LangChain* courses that inspired this project.
+- **[React](https://react.dev/) & [Vite](https://vitejs.dev/)** — for the fast, modern frontend development environment.
+- **[Tailwind CSS](https://tailwindcss.com/)** — for the utility-first CSS framework that made responsive UI design rapid and consistent.
+
+---
+
+<div align="center">
+
+**⭐ If this project helped you explore multimodal AI, please consider starring it on GitHub!**
+
+[![Star on GitHub](https://img.shields.io/github/stars/ibtesaamaslam/AI-Image-Analyzer?style=social)](https://github.com/ibtesaamaslam/AI-Image-Analyzer)
+
+*Built with ❤️ by [Ibtesaam Aslam](https://github.com/ibtesaamaslam)*
+
+</div>
