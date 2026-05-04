@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/Tailwind%20CSS-Styling-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
 <img src="https://img.shields.io/badge/License-MIT-00C853?style=for-the-badge"/>
 
-<br/><br/>
+<br/>
 
 # 🧠 AI Image Analyzer
 ### *React · TypeScript · Gemini API · Tailwind CSS · Vite*
